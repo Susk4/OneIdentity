@@ -1,0 +1,21 @@
+{
+  "name": "oneidentity",
+  "version": "1.0.0",
+  "description": "OneIdentity coding challenge",
+  "main": "calculator.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "node calculator.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Susk4/OneIdentity.git"
+  },
+  "author": "Henrik Balázs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Susk4/OneIdentity/issues"
+  },
+  "homepage": "https://github.com/Susk4/OneIdentity#readme"
+}
