@@ -5,7 +5,7 @@
   "main": "calculator.js",
   "type": "module",
   "scripts": {
-    "test": "test",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "node calculator.js"
   },
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Susk4/OneIdentity/issues"
   },
-  "homepage": "https://github.com/Susk4/OneIdentity#readme"
+  "homepage": "https://github.com/Susk4/OneIdentity#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
 }

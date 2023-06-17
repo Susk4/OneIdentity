@@ -1,10 +1,10 @@
-import { validateOperand } from './validators.js';
+import { validateOperand } from "./validators.js";
 
 // Function to parse and convert the operand string
 export function parseOperand(operand) {
   validateOperand(operand);
-  if (operand.includes('&')) {
-    const [whole, fraction] = operand.split('&');
+  if (operand.includes("&")) {
+    const [whole, fraction] = operand.split("&");
     return parseInt(whole) + parseFraction(fraction);
   } else {
     return parseFraction(operand);
@@ -12,10 +12,8 @@ export function parseOperand(operand) {
 }
 
 // Function to parse and convert the fraction string
-function parseFraction(fraction) {
-  const [numerator, deniminator] = fraction.split('/');
-  console.log(numerator, deniminator);
-  console.log(parseInt(numerator) / parseInt(deniminator))
+export function parseFraction(fraction) {
+  const [numerator, deniminator] = fraction.split("/");
   return parseInt(numerator) / parseInt(deniminator);
 }
 
@@ -23,6 +21,9 @@ function parseFraction(fraction) {
 export function convertToFraction(decimal) {
   let whole = Math.floor(decimal);
   let fractional = decimal - whole;
+  if (fractional === 0) {
+    return `${whole}`;
+  }
   let numerator = fractional.toFixed(2) * 100;
   let denominator = 100;
   let gcd = greatestCommonDivisor(numerator, denominator);
@@ -36,9 +37,10 @@ export function convertToFraction(decimal) {
 }
 
 // Function to find the greatest common divisor of two numbers
-function greatestCommonDivisor(a, b) {
+export function greatestCommonDivisor(a, b) {
   if (b === 0) {
-    return a;
+    return Math.abs(a);
   }
+  console.log(a, b, a % b);
   return greatestCommonDivisor(b, a % b);
 }

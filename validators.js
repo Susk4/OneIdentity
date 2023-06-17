@@ -7,27 +7,32 @@ export function validateString(input) {
 // Function to validate the operand string
 export function validateOperand(operand) {
   if (!validateString(operand)) {
-    throw new Error('Operand should be a number,fraction or improper fraction');
+    throw new Error("Operand should be a number,fraction or improper fraction");
   }
 
-  if (operand.includes('&')) {
-    const [_, fraction] = operand.split('&');
-    if (fraction.includes('/')) {
-      validateFraction(fraction);
-    }
-    else {
-      throw new Error('Fraction should be in the format of numerator/deniminator');
-    }
+  if (!operand.includes("&")) {
+    validateFractionFormat(operand);
+  } else if (operand.split("&").length === 2) {
+    const [_, fraction] = operand.split("&");
+    validateFractionFormat(fraction);
   } else {
-    if (operand.includes('/')) {
-      validateFraction(operand);
-    }
+    throw new Error("Operand should be in format whole&numerator/denominator");
   }
 }
 // Function to validate the fraction string
 export function validateFraction(fraction) {
-  const [numerator, deniminator] = fraction.split('/');
-  if (numerator > deniminator) {
-    throw new Error('Numerator should be less than deniminator');
+  const [numerator, denominator] = fraction.split("/");
+  if (numerator >= denominator) {
+    throw new Error("Numerator should be less than deniminator");
+  }
+}
+
+export function validateFractionFormat(fraction) {
+  if (fraction.split("/").length === 2) {
+    validateFraction(fraction);
+  } else {
+    throw new Error(
+      "Fraction should be in the format of numerator/deniminator"
+    );
   }
 }
