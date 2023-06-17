@@ -1,18 +1,14 @@
 # OneIdentity Coding Test
 
-## Task Description:
+## Table of Contents
+
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Usage](#usage)
+
+## About <a name = "about"></a>
 
 ### One Identity Coding Challenge
-
-Thank you for taking the One Identity coding challenge! You may use any coding language. Please provide the solution via a GitHub repository (preferred) or a zip file. The time spent does not need to be reported, but we would appreciate having the exercise returned within 7 days. We will review the solution and may elect to discuss it during any follow-up interviews.
-
-### Code will be evaluated on these criteria:
-
-- The solution builds and runs. Instructions are helpful.
-- The program gives the correct answers.
-- Errors are handled and reported.
-- The code is well structured and can be readily understood.
-- The code has been tested and includes evidence of such (hint: unit tests).
 
 ### The Problem
 
@@ -26,7 +22,7 @@ Write a command-line program that takes operations on fractions as input and pro
 
 ### Example runs (where '?' represents the command prompt):
 
-? 1/2 * 3&3/4
+? 1/2 \* 3&3/4
 = 1&7/8
 
 ? 2&3/8 + 9/8
@@ -35,3 +31,65 @@ Write a command-line program that takes operations on fractions as input and pro
 ? 1&3/4 - 2
 
 = -1/4
+
+## Getting Started <a name = "getting_started"></a>
+
+To run the project locally, you need to install the required dependencies. Follow the instructions below:
+
+### Prerequisites
+
+Before getting started, ensure that you have the following prerequisites installed:
+
+- Node.js (version X.X.X or higher)
+- npm (Node Package Manager)
+
+### Installing
+
+1. Ensure you have Node.js and npm (Node Package Manager) installed on your machine. You can download and install them from the official Node.js website: [https://nodejs.org](https://nodejs.org).
+
+2. Open a command-line interface or terminal.
+
+3. Navigate to the root directory of the project.
+
+4. Run the following command to install the project dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage <a name = "usage"></a>
+
+To run the project, use the following command:
+
+```bash
+npm start
+```
+
+This command will start the project and execute the main entry point defined in your `package.json` file.
+
+Now you can start typing in the desired calculations. The program will display the results or any messages regarding the input.
+
+To exit the program, just type the following command:
+
+```bash
+? exit
+```
+
+### Testing
+
+To run the unit tests for the project, use the following command:
+
+```bash
+npm test
+```
+
+This command will execute the test suite and provide the test results, including any failures or errors.
+
+Make sure to customize the scripts in your `package.json` file according to your project structure and testing framework.
+
+Feel free to explore and modify the code to fit your needs!
+
+### Known issues
+
+- Precision for long fractions
+- Handling infinite fractions
