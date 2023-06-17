@@ -23,7 +23,6 @@ export function convertToFraction(decimal) {
   if (fractional === 0) {
     return `${whole}`;
   }
-  console.log(whole, fractional, decimal);
   let numerator = fractional.toFixed(2) * 100; // here some precision is lost
   let denominator = 100;
   let gcd = greatestCommonDivisor(numerator, denominator);
