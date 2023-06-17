@@ -26,7 +26,7 @@ Write a command-line program that takes operations on fractions as input and pro
 
 ### Example runs (where '?' represents the command prompt):
 
-? 1/2 \* 3&3/4
+? 1/2 * 3&3/4
 = 1&7/8
 
 ? 2&3/8 + 9/8

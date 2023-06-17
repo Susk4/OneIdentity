@@ -1,7 +1,6 @@
 import readline from "readline";
 import { parseOperand, convertToFraction } from "./utils.js";
 
-// Function to perform the arithmetic operation on fractions
 function performOperation(operator, operand1, operand2) {
   let result;
   switch (operator) {
@@ -25,7 +24,6 @@ function performOperation(operator, operand1, operand2) {
   return result;
 }
 
-// Main function to read input, perform operations, and display the result
 function runCalculator() {
   const rl = readline.createInterface({
     input: process.stdin,
