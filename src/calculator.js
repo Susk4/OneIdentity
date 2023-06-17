@@ -15,7 +15,7 @@ function performOperation(operator, operand1, operand2) {
       break;
     case "/":
       result = operand1 / operand2;
-      break;
+      breaxk;
     default:
       throw new Error(
         `'${operator}' is not a valid operator. Valid operators are +, -, *, and /.`

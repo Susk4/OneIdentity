@@ -3,7 +3,7 @@ import {
   parseOperand,
   parseFraction,
   greatestCommonDivisor,
-} from "../utils";
+} from "../src/utils";
 
 test("test parseOperand() to return correct number for correct input", () => {
   expect(parseOperand("1&1/2")).toBe(parseInt("1") + parseFraction("1/2"));

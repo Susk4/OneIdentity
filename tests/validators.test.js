@@ -3,7 +3,7 @@ import {
   validateOperand,
   validateString,
   validateFractionFormat,
-} from "../validators";
+} from "../src/validators";
 
 test("test validateOperand() to throw Error if format is incorrect", () => {
   expect(() => validateOperand("2&&3/4")).toThrow();

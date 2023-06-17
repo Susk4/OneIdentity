@@ -2,11 +2,11 @@
   "name": "oneidentity",
   "version": "1.0.0",
   "description": "OneIdentity coding challenge",
-  "main": "calculator.js",
+  "main": "./src/calculator.js",
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "start": "node calculator.js"
+    "start": "node ./src/calculator.js"
   },
   "repository": {
     "type": "git",
